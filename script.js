@@ -4,16 +4,18 @@ gsap.registerPlugin(ScrollTrigger);
 // Attendre que le DOM soit chargé
 document.addEventListener('DOMContentLoaded', function() {
   // Add smooth scrolling for nav links
-  document.querySelectorAll('nav a').forEach(anchor => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
       
-      window.scrollTo({
-        top: targetSection.offsetTop - 60,
-        behavior: 'smooth'
-      });
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 60, // Ajustez le décalage si nécessaire
+          behavior: 'smooth'
+        });
+      }
     });
   });
 
