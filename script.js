@@ -49,38 +49,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Stages
-  gsap.from("#stages .education-item", {
+  // Experiences
+  gsap.from("#experiences .education-item", {
     duration: 1,
     opacity: 0,
     y: 30,
     stagger: 0.3,
     scrollTrigger: {
-      trigger: "#stages",
+      trigger: "#experiences",
       start: "top center+=100"
     }
   });
 
-  // Projets académiques
-  gsap.from("#projets-academiques .project-card", {
+  // Projets académiques et personnels
+  gsap.from("#projets .project-card", {
     duration: 1,
     opacity: 0,
     y: 50,
     stagger: 0.2,
     scrollTrigger: {
-      trigger: "#projets-academiques",
-      start: "top center+=100"
-    }
-  });
-
-  // Projets personnels
-  gsap.from("#projets-personnels .project-card", {
-    duration: 1,
-    opacity: 0,
-    y: 50,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: "#projets-personnels",
+      trigger: "#projets",
       start: "top center+=100"
     }
   });
@@ -89,17 +77,18 @@ document.addEventListener('DOMContentLoaded', function() {
   gsap.fromTo(
     ".skill-badge",
     {
-      autoAlpha: 0, // Commence avec opacity: 0 et visibility: hidden
-      y: 20, // Position légèrement en dessous
+      autoAlpha: 0,
+      y: 20,
     },
     {
-      autoAlpha: 1, // Rend visible
-      y: 0, // Position normale
-      duration: 0.5, // Durée de l'animation
-      ease: "power2.out", // Transition douce
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: 0.1, // Ajoutez un délai entre chaque badge
+      ease: "power2.out",
       scrollTrigger: {
-        trigger: "#projets-academiques", // Déclencheur
-        start: "top center+=100", // Déclenchement au centre de l'écran
+        trigger: "#competences", // Changez le déclencheur
+        start: "top center+=100",
       },
     }
   );
