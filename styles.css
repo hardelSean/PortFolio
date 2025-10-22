@@ -13,6 +13,11 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
 body {
   background: var(--light);
   color: var(--dark);
@@ -428,7 +433,7 @@ body {
   color: white;
   text-align: center;
   padding: 2rem;
-  margin-top: 2rem;
+  border-top: solid 1px var(--light);
 }
 
 .footer p {
