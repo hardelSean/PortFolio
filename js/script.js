@@ -42,9 +42,17 @@ function animateSectionItems(sectionSelector, itemSelector, options = {}) {
 // ---------------------------
 // Animations des sections
 // ---------------------------
+// Pour la version française
 animateSectionItems("#formation", ".education-item");
 animateSectionItems("#experiences", ".education-item");
 animateSectionItems("#projets", ".project-card", { y: 50, stagger: 0.2 });
+animateSectionItems("#competences", ".skills-category");
+
+// Pour la version anglaise
+animateSectionItems("#education", ".education-item");
+animateSectionItems("#experience", ".education-item");
+animateSectionItems("#projects", ".project-card", { y: 50, stagger: 0.2 });
+animateSectionItems("#skills", ".skills-category");
 
 // ---------------------------
 // Fonction utilitaire : Animation des badges (skills)
@@ -80,7 +88,9 @@ function animateBadges(containerSelector, options = {}) {
 // Animation badges compétences et projets/expériences
 animateBadges(".skills-category");
 animateBadges("#experiences .skills", { scale: 0.8, duration: 0.4, stagger: 0.08, ease: "back.out(1.2)" });
+animateBadges("#experience .skills", { scale: 0.8, duration: 0.4, stagger: 0.08, ease: "back.out(1.2)" });
 animateBadges("#projets .skills", { scale: 0.8, duration: 0.4, stagger: 0.08, ease: "back.out(1.2)" });
+animateBadges("#projects .skills", { scale: 0.8, duration: 0.4, stagger: 0.08, ease: "back.out(1.2)" });
 
 // ---------------------------
 // Animation lignes de code
@@ -99,12 +109,12 @@ document.querySelectorAll('.code-line').forEach((line, index) => {
 // Surlignement navigation au scroll
 // ---------------------------
 const sections = document.querySelectorAll('section, header');
-const navLinks = document.querySelectorAll('nav ul li a');
+const navLinks = document.querySelectorAll('nav ul li a:not(.lang-switch a)');
 
 function highlightNav() {
   let current = '';
   sections.forEach(section => {
-    const offset = window.innerWidth < 768 ? 80 : 100; // responsive-ready
+    const offset = window.innerWidth < 768 ? 80 : 100;
     if (pageYOffset >= section.offsetTop - offset) current = section.id;
   });
 
@@ -114,4 +124,4 @@ function highlightNav() {
 }
 
 window.addEventListener('scroll', highlightNav);
-window.addEventListener('resize', highlightNav); // adapte les offsets si l'écran change
+window.addEventListener('resize', highlightNav);
