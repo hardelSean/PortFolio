@@ -1,3 +1,6 @@
+/* =========================================
+   1. VARIABLES & BASE
+   ========================================= */
 :root {
   --primary: #3f51b5;
   --secondary: #00bcd4;
@@ -24,6 +27,9 @@ body {
   line-height: 1.6;
 }
 
+/* =========================================
+   2. NAVIGATION
+   ========================================= */
 .nav {
   position: fixed;
   top: 0;
@@ -57,7 +63,7 @@ body {
   color: var(--secondary);
 }
 
-/* Style pour le bouton de changement de langue */
+/* Bouton langue */
 .lang-switch a {
   background: var(--primary);
   color: white;
@@ -72,6 +78,9 @@ body {
   color: white;
 }
 
+/* =========================================
+   3. HEADER & ANIMATIONS
+   ========================================= */
 .header {
   margin-top: 60px;
   min-height: 100vh;
@@ -130,6 +139,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Visual Code Window */
 .header-visual {
   flex: 1;
   position: relative;
@@ -153,11 +163,13 @@ body {
   animation: typeLine 0.5s ease forwards;
 }
 
+/* Keyframes */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -169,6 +181,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -180,12 +193,16 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* =========================================
+   4. STRUCTURE DES SECTIONS
+   ========================================= */
 .section {
   padding: 4rem 2rem;
 }
@@ -230,6 +247,9 @@ body {
   background: var(--accent);
 }
 
+/* =========================================
+   5. FORMATION & EXPERIENCES
+   ========================================= */
 .education {
   max-width: 800px;
   margin: 0 auto;
@@ -250,6 +270,9 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* =========================================
+   6. PROJETS (CARDS & LAYOUT)
+   ========================================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -265,19 +288,124 @@ body {
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  /* Flexbox pour l'alignement vertical uniforme */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h4 {
   color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
+.project-card p {
+  flex-grow: 1;
+  /* Pousse le contenu vers le bas */
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* --- Images & Placeholders --- */
+.project-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #eee;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4rem;
+  opacity: 0.9;
+}
+
+/* --- Boutons & Liens --- */
+.project-links {
+  margin-top: auto;
+  /* Aligne en bas */
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-height: 65px;
+  /* Force l'alignement même si vide */
+  align-items: center;
+}
+
+.btn-link,
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-link {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-github {
+  background: #24292e;
+  color: white;
+  border: 2px solid #24292e;
+}
+
+.btn-github:hover {
+  background: #000;
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   7. COMPETENCES
+   ========================================= */
 .skills-category {
   margin-bottom: 3rem;
   text-align: center;
@@ -314,6 +442,9 @@ body {
   background: var(--secondary);
 }
 
+/* =========================================
+   8. CONTACT & FOOTER
+   ========================================= */
 .contact {
   text-align: center;
   background: var(--dark);
@@ -363,7 +494,9 @@ body {
   opacity: 0.8;
 }
 
-/* Media Queries pour le responsive */
+/* =========================================
+   9. RESPONSIVE
+   ========================================= */
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2rem;
