@@ -18,7 +18,7 @@ export default function Projects() {
                         but here we use Next/Image for optimization if it's local. 
                         Since we just moved assets, we assume they are in public/assets */}
                     <Image 
-                        src={project.image} 
+                        src={`${process.env.BASE_PATH || ''}${project.image}`}
                         alt={project.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
