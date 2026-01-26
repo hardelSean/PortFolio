@@ -10,7 +10,7 @@ export const portfolioData = {
     social: {
       github: "https://github.com/hardelsean",
       linkedin: "https://www.linkedin.com/in/sean-hardel-2b4201355/",
-      cv: "/assets/docs/CV.pdf"
+      cv: "/cv"
     }
   },
   education: [
@@ -61,6 +61,26 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "Portfolio Professionnel 2026",
+      category: "Personnel",
+      description: "Conception d'une application web moderne avec Next.js 16 et Tailwind CSS 4. Architecture orientée composants, typage TypeScript rigoureux et animations fluides avec Framer Motion.",
+      image: "/assets/img/portfolio-v2.png",
+      emoji: "🚀",
+      stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "Framer Motion"],
+      link: null,
+      repo: "https://github.com/hardelsean/portfolio"
+    },
+    {
+      title: "E-commerce Hardware",
+      category: "Personnel",
+      description: "Application Fullstack (Monorepo) de vente de composants PC. Gestion des stocks en temps réel via WebSockets (synchro admin/client instantanée), système de panier complet et rôles utilisateurs.",
+      image: "/assets/img/ecommerce-platform.png",
+      emoji: "🖥️",
+      stack: ["Next.js", "Fastify", "TypeScript", "WebSockets", "Tailwind"],
+      link: null,
+      repo: "https://github.com/hardelSean/hardware-shop"
+    },
+    {
       title: "Agence Ancreo",
       category: "Académique",
       description: "Conception et développement d'un site vitrine immersif pour une agence fictive. Focus sur l'expérience utilisateur (UX) et les interactions GSAP.",
@@ -88,26 +108,6 @@ export const portfolioData = {
       stack: ["Java", "Android", "SQLite"],
       link: null,
       repo: null
-    },
-    {
-      title: "Portfolio Professionnel 2026",
-      category: "Personnel",
-      description: "Conception d'une application web moderne avec Next.js 16 et Tailwind CSS 4. Architecture orientée composants, typage TypeScript rigoureux et animations fluides avec Framer Motion.",
-      image: "/assets/img/portfolio-v2.png",
-      emoji: "🚀",
-      stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "Framer Motion"],
-      link: null,
-      repo: "https://github.com/hardelsean/portfolio"
-    },
-    {
-      title: "E-commerce Hardware",
-      category: "Personnel",
-      description: "Application Fullstack (Monorepo) de vente de composants PC. Gestion des stocks en temps réel via WebSockets (synchro admin/client instantanée), système de panier complet et rôles utilisateurs.",
-      image: "/assets/img/ecommerce-platform.png",
-      emoji: "🖥️",
-      stack: ["Next.js", "Fastify", "TypeScript", "WebSockets", "Tailwind"],
-      link: null,
-      repo: "https://github.com/hardelSean/hardware-shop"
     }
   ],
   skills: {

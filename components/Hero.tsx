@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import Link from 'next/link';
 import { portfolioData } from '@/data/portfolio';
 
 export default function Hero() {
@@ -41,14 +42,13 @@ export default function Hero() {
                 Me contacter
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a 
-                href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`}
-                target="_blank"
+              <Link 
+                href={portfolioData.personal.social.cv}
                 className="px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white rounded-lg font-medium transition-all flex items-center gap-2"
               >
                 <Download size={18} />
                 Mon CV
-              </a>
+              </Link>
             </div>
 
             <div className="mt-12 flex gap-6 text-slate-400">

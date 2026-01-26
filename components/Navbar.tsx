@@ -44,17 +44,16 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a 
-            href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`} 
-            target="_blank" 
+          <Link 
+            href={portfolioData.personal.social.cv} 
             className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-all"
           >
             Mon CV
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button  
           className="md:hidden text-slate-300 hover:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -75,13 +74,12 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a 
-            href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`} 
-            target="_blank" 
+          <Link 
+            href={portfolioData.personal.social.cv} 
             className="text-blue-400 font-medium"
           >
             Télécharger CV
-          </a>
+          </Link>
         </div>
       )}
     </nav>
