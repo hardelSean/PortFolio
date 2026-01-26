@@ -1,59 +1,70 @@
 # Portfolio - Sean Hardel
 
-![Aperçu du Portfolio](./assets/Screenshot_Accueil.png)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-purple?style=for-the-badge&logo=framer)
 
-> **Démo en ligne :** [Voir le portfolio](https://hardelsean.github.io/PortFolio/)
+Bienvenue sur le dépôt de mon portfolio professionnel 2026. Ce projet a été entièrement refondu pour démontrer mes compétences en développement web moderne, notamment sur l'écosystème React/Next.js.
 
-## 📄 Présentation
+👉 **[Voir le site en ligne](https://hardelsean.github.io/portfolio/)**
 
-Bienvenue sur le dépôt de mon portfolio personnel. Ce projet met en avant mes compétences, mes expériences professionnelles et mes projets en tant que **Développeur Web Full Stack**. Le site est responsive, interactif et entièrement bilingue (Français/Anglais).
+## 🚀 Fonctionnalités
 
-Je suis actuellement étudiant en **Licence Pro MIAW** (Métiers de l'Informatique : Applications Web) à l'Université de La Rochelle, à la recherche d'un **stage de 3 mois minimum** à partir d'avril 2026.
+- **Design Moderne & Responsive** : Interface "Dark Mode" épurée, adaptée à tous les écrans.
+- **Animations Fluides** : Utilisation de `framer-motion` pour des transitions douces au défilement.
+- **Architecture Scalable** : Séparation stricte des données (`data/`) et de l'UI (`components/`).
+- **Performance** : Optimisé avec Next.js (App Router) et Tailwind CSS v4.
+- **Type-Safe** : Codebase 100% TypeScript pour une robustesse maximale.
 
-## ✨ Fonctionnalités
+## 🛠️ Stack Technique
 
-* **Bilingue :** Versions complètes en Français et Anglais (`index.html` & `index-en.html`).
-* **Animations Modernes :** Utilisation de **GSAP** (GreenSock) & **ScrollTrigger** pour des effets d'apparition fluides et une présentation dynamique du code.
-* **Design Responsive :** Adapté pour mobile, tablette et desktop (Flexbox & Grid).
-* **Interface Interactive :** Navigation surlignée au scroll et effets de survol.
-* **Code Propre :** Structure sémantique HTML5 et séparation claire CSS/JS.
-
-## 🛠 Technologies Utilisées
-
-* **Frontend :** HTML5, CSS3, JavaScript (ES6+)
-* **Librairie d'Animation :** [GSAP 3](https://greensock.com/gsap/) (Plugin ScrollTrigger)
-* **Versionning :** Git / GitHub
+- **Framework** : [Next.js 16](https://nextjs.org/) (App Router)
+- **Langage** : [TypeScript](https://www.typescriptlang.org/)
+- **Style** : [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations** : [Framer Motion](https://www.framer.com/motion/)
+- **Icônes** : [Lucide React](https://lucide.dev/)
+- **Déploiement** : GitHub Pages (Static Export)
 
 ## 📂 Structure du Projet
 
 ```bash
-├── assets/          # CVs (PDF) & Images
-├── css/
-│   └── styles.css   # Feuille de style principale
-├── js/
-│   └── script.js    # Logique et configurations GSAP
-├── index.html       # Version Française (Entrée principale)
-└── index-en.html    # Version Anglaise
+├── app/                # Pages et Layouts (Next.js App Router)
+├── components/         # Composants Réutilisables (Hero, Projects, Navbar...)
+├── data/               # Données du site (C'est ici qu'on modifie le contenu !)
+│   └── portfolio.ts    # Fichier unique contenant tout le texte et les liens
+├── public/             # Images et fichiers statiques
 ```
 
-## 🚀 Installation locale
+## 💻 Installation & Développement
 
-S'agissant d'un site statique, aucune compilation n'est requise.
+Pour lancer ce projet localement :
 
-1.  **Cloner le dépôt :**
+1.  **Cloner le dépôt**
     ```bash
-    git clone [https://github.com/hardelsean/PortFolio.git](https://github.com/hardelsean/PortFolio.git)
+    git clone https://github.com/hardelsean/portfolio.git
+    cd portfolio
     ```
 
-2.  **Lancer le projet :**
-    Ouvrez simplement `index.html` dans votre navigateur.
-    *Pour un fonctionnement optimal des modules ES6, l'utilisation d'un serveur local (comme l'extension "Live Server" de VS Code) est recommandée.*
+2.  **Installer les dépendances**
+    ```bash
+    npm install
+    ```
 
-## 📬 Contact
+3.  **Lancer le serveur de développement**
+    ```bash
+    npm run dev
+    ```
+    Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-* **Email :** [sean.hardel04@gmail.com](mailto:sean.hardel04@gmail.com)
-* **LinkedIn :** [Sean Hardel](https://www.linkedin.com/in/sean-hardel-2b4201355/)
-* **Localisation :** La Rochelle, France
+## 📦 Déploiement (GitHub Pages)
+
+Le projet est configuré pour générer un site statique (`output: 'export'`).
+
+```bash
+# Générer le build statique dans le dossier 'out/'
+npm run build
+```
 
 ---
-*© 2025 Sean Hardel - Tous droits réservés.*
+*Développé par Sean Hardel - 2026*
