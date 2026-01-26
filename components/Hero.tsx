@@ -42,7 +42,7 @@ export default function Hero() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href={portfolioData.personal.social.cv}
+                href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`}
                 target="_blank"
                 className="px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white rounded-lg font-medium transition-all flex items-center gap-2"
               >

@@ -45,7 +45,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a 
-            href={portfolioData.personal.social.cv} 
+            href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`} 
             target="_blank" 
             className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-all"
           >
@@ -76,7 +76,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a 
-            href={portfolioData.personal.social.cv} 
+            href={`${process.env.BASE_PATH || ''}${portfolioData.personal.social.cv}`} 
             target="_blank" 
             className="text-blue-400 font-medium"
           >
